@@ -23,8 +23,32 @@ const meagBullets = [
   "Digital Portfolio Development",
 ];
 
+function LogoPlaceholder({ label }: { label: string }) {
+  return (
+    <div className="flex h-[72px] w-[72px] items-center justify-center rounded-2xl border-2 border-light-gray bg-white">
+      <div className="text-center">
+        <svg
+          className="mx-auto h-6 w-6 text-gray-300"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+          <circle cx="8.5" cy="8.5" r="1.5" />
+          <polyline points="21 15 16 10 5 21" />
+        </svg>
+        <span className="mt-1 block text-[9px] font-medium uppercase tracking-[0.15em] text-gray-300">
+          {label}
+        </span>
+      </div>
+    </div>
+  );
+}
+
 function JourneyCard({
-  icon,
   title,
   description,
   bullets,
@@ -32,8 +56,8 @@ function JourneyCard({
   gradientFrom,
   gradientTo,
   id,
+  logoLabel,
 }: {
-  icon: string;
   title: string;
   description: string;
   bullets: string[];
@@ -41,6 +65,7 @@ function JourneyCard({
   gradientFrom: string;
   gradientTo: string;
   id: string;
+  logoLabel: string;
 }) {
   const scrollToSection = () => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -60,8 +85,8 @@ function JourneyCard({
       <div className="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-gold to-gold/60 transition-all duration-500 group-hover:w-full" />
 
       <div className="relative z-10">
-        <span className="inline-block text-5xl md:text-6xl">{icon}</span>
-        <h3 className="font-heading mt-4 text-2xl leading-tight text-navy md:text-3xl">
+        <LogoPlaceholder label={logoLabel} />
+        <h3 className="font-heading mt-6 text-2xl leading-tight text-navy md:text-3xl">
           {title}
         </h3>
         <p className="mt-4 leading-relaxed text-gray-600">{description}</p>
@@ -86,7 +111,7 @@ function JourneyCard({
 
 export default function JourneySection() {
   return (
-    <section id="journey" className="bg-light-bg px-6 py-24 md:py-32 lg:px-12">
+    <section id="journey" className="bg-light-bg px-6 py-28 md:py-36 lg:px-12">
       <div className="mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -110,7 +135,6 @@ export default function JourneySection() {
 
         <div className="mt-16 grid gap-8 md:grid-cols-2">
           <JourneyCard
-            icon="🌍"
             title="Global Market Expansion"
             description="Expand into international markets with tailored business development, operational support, and strategic partnerships focused on manufacturing and semiconductor industries."
             bullets={globalBullets}
@@ -118,9 +142,9 @@ export default function JourneySection() {
             gradientFrom="from-navy"
             gradientTo="to-navy/10"
             id="stats"
+            logoLabel="Division Logo"
           />
           <JourneyCard
-            icon="🤖"
             title="Executive AI Guild (MEAG)"
             description="Build executive AI capability through CPD-certified programmes, leadership workshops, governance frameworks, and applied AI learning without requiring technical expertise."
             bullets={meagBullets}
@@ -128,6 +152,7 @@ export default function JourneySection() {
             gradientFrom="from-gold"
             gradientTo="to-gold/10"
             id="expertise"
+            logoLabel="Division Logo"
           />
         </div>
       </div>

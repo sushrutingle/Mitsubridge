@@ -9,24 +9,25 @@ export default function Hero() {
 
   return (
     <section className="relative h-[90vh] min-h-[600px] w-full overflow-hidden">
-      <div className="flex h-full flex-col md:flex-row">
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=75')",
+        }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-br from-navy/85 via-navy/65 to-navy/75" />
+      <div className="absolute inset-0 bg-gradient-to-t from-navy/30 via-transparent to-transparent" />
+
+      <div className="relative z-10 flex h-full flex-col md:flex-row">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2 }}
-          className="relative flex h-1/2 w-full cursor-pointer items-end overflow-hidden md:h-full md:w-1/2"
+          className="flex flex-1 cursor-pointer items-end overflow-hidden"
           onClick={() => scrollTo("journey")}
         >
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=75')",
-            }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-navy/85 via-navy/70 to-navy/50" />
-          <div className="absolute inset-0 bg-gradient-to-t from-navy/40 via-transparent to-transparent" />
-          <div className="relative z-10 p-8 md:p-12 lg:p-16">
+          <div className="p-8 md:p-12 lg:p-16 xl:pl-20">
             <span className="mb-3 inline-block rounded-full border border-gold/50 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-gold">
               Division One
             </span>
@@ -51,23 +52,16 @@ export default function Hero() {
           </div>
         </motion.div>
 
+        <div className="hidden h-3/4 self-center w-px bg-white/10 md:block" />
+
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 0.2 }}
-          className="relative flex h-1/2 w-full cursor-pointer items-end overflow-hidden md:h-full md:w-1/2"
+          className="flex flex-1 cursor-pointer items-end overflow-hidden"
           onClick={() => scrollTo("journey")}
         >
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=75')",
-            }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-l from-navy/85 via-navy/70 to-navy/50" />
-          <div className="absolute inset-0 bg-gradient-to-t from-navy/40 via-transparent to-transparent" />
-          <div className="relative z-10 p-8 md:p-12 lg:p-16">
+          <div className="p-8 md:p-12 lg:p-16 xl:pr-20">
             <span className="mb-3 inline-block rounded-full border border-gold/50 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-gold">
               Division Two
             </span>
@@ -91,20 +85,6 @@ export default function Hero() {
             </button>
           </div>
         </motion.div>
-      </div>
-
-      <div className="absolute bottom-0 left-0 right-0 z-20 flex flex-col items-center justify-center pb-6 md:pb-8">
-        <div className="rounded-2xl bg-white/10 px-6 py-4 text-center backdrop-blur-md md:px-10 md:py-5">
-          <h1 className="font-heading text-xl leading-tight text-white md:text-2xl lg:text-3xl">
-            One Company.
-            <br className="md:hidden" />{" "}
-            <span className="text-gold">Two Powerful Growth Paths.</span>
-          </h1>
-          <p className="mx-auto mt-2 max-w-2xl text-xs leading-relaxed text-white/70 md:text-sm">
-            MitsuBridge helps organisations expand across international markets
-            while preparing leaders for the AI-powered future.
-          </p>
-        </div>
       </div>
     </section>
   );

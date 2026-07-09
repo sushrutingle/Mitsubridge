@@ -15,7 +15,7 @@ const partners = [
 
 export default function PartnersSection() {
   return (
-    <section className="overflow-hidden bg-white px-6 py-24 md:py-32 lg:px-12">
+    <section className="overflow-hidden bg-white px-6 py-28 md:py-36 lg:px-12">
       <div className="mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 40 }}

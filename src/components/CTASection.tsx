@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function CTASection() {
   return (
-    <section className="relative overflow-hidden bg-navy px-6 py-24 md:py-32 lg:px-12">
+    <section className="relative overflow-hidden bg-navy px-6 py-28 md:py-36 lg:px-12">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(201,163,78,0.08),transparent_50%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(201,163,78,0.05),transparent_50%)]" />
 
