@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 
@@ -57,6 +58,7 @@ function JourneyCard({
   gradientTo,
   id,
   logoLabel,
+  isRoute,
 }: {
   title: string;
   description: string;
@@ -66,9 +68,16 @@ function JourneyCard({
   gradientTo: string;
   id: string;
   logoLabel: string;
+  isRoute?: boolean;
 }) {
-  const scrollToSection = () => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  const router = useRouter();
+
+  const handleClick = () => {
+    if (isRoute) {
+      router.push(id);
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -99,7 +108,7 @@ function JourneyCard({
           ))}
         </ul>
         <button
-          onClick={scrollToSection}
+          onClick={handleClick}
           className="mt-8 inline-block rounded-[20px] border-2 border-gold px-8 py-3 text-sm font-semibold tracking-wide text-gold transition-all duration-300 hover:bg-gold hover:text-white hover:scale-105"
         >
           {buttonLabel}
@@ -141,8 +150,9 @@ export default function JourneySection() {
             buttonLabel="Explore Global"
             gradientFrom="from-navy"
             gradientTo="to-navy/10"
-            id="stats"
+            id="/global"
             logoLabel="Division Logo"
+            isRoute
           />
           <JourneyCard
             title="Executive AI Guild (MEAG)"
@@ -151,8 +161,9 @@ export default function JourneySection() {
             buttonLabel="Explore MEAG"
             gradientFrom="from-gold"
             gradientTo="to-gold/10"
-            id="expertise"
+            id="/meag"
             logoLabel="Division Logo"
+            isRoute
           />
         </div>
       </div>
