@@ -1,12 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  images: {
-    qualities: [75],
-  },
-  turbopack: {
-    root: __dirname,
-  },
+  output: "export",
+  basePath: "/Mitsubridge",
+  images: { unoptimized: true },
+  trailingSlash: true,
 };
 
 export default nextConfig;
