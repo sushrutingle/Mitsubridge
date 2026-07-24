@@ -1,10 +1,12 @@
 import type { NextConfig } from "next";
 
+const isDeploy = process.env.GITHUB_ACTIONS === "true";
+
 const nextConfig: NextConfig = {
-  output: "export",
-  basePath: "/Mitsubridge",
+  ...(isDeploy && { output: "export" as const }),
+  ...(isDeploy && { basePath: "/Mitsubridge" }),
   images: { unoptimized: true },
-  trailingSlash: true,
+  ...(isDeploy && { trailingSlash: true }),
 };
 
 export default nextConfig;
