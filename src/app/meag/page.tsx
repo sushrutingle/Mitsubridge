@@ -9,8 +9,6 @@ import MeagSchoolBenefits from "@/components/MeagSchoolBenefits";
 import MeagLearningModels from "@/components/MeagLearningModels";
 import MeagAccreditation from "@/components/MeagAccreditation";
 import MeagCareerPathways from "@/components/MeagCareerPathways";
-import MeagLeadership from "@/components/MeagLeadership";
-import MeagRegionalSupport from "@/components/MeagRegionalSupport";
 import MeagCTA from "@/components/MeagCTA";
 
 export default function MeagPage() {
@@ -26,8 +24,6 @@ export default function MeagPage() {
       <MeagLearningModels />
       <MeagAccreditation />
       <MeagCareerPathways />
-      <MeagLeadership />
-      <MeagRegionalSupport />
       <MeagCTA />
       <Footer />
     </>
