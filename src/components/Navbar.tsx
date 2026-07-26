@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
@@ -44,29 +45,14 @@ export default function Navbar() {
         aria-label="Main navigation"
       >
         <Link href="/" className="flex items-center gap-3">
-          <div
-            className={`flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-500 md:h-11 md:w-11 ${
-              scrolled
-                ? "border-navy/20 bg-navy/5"
-                : "border-white/30 bg-white/10"
-            }`}
-          >
-            <svg
-              className={`h-5 w-5 transition-colors duration-500 md:h-6 md:w-6 ${
-                scrolled ? "text-navy/60" : "text-white/60"
-              }`}
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M12 2L2 7l10 5 10-5-10-5z" />
-              <path d="M2 17l10 5 10-5" />
-              <path d="M2 12l10 5 10-5" />
-            </svg>
-          </div>
+          <Image
+            src={scrolled ? "/images/Mitsubridge_logo_navy.png" : "/images/Mitsubridge_logo_white.png"}
+            alt="MitsuBridge"
+            width={48}
+            height={48}
+            className="h-10 w-auto md:h-12 rounded-lg transition-opacity duration-500"
+            priority
+          />
           <span
             className={`font-heading text-2xl font-bold tracking-tight transition-colors duration-500 ${
               scrolled ? "text-navy" : "text-white"
