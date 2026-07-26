@@ -149,39 +149,7 @@ npm run lint
 
 > **Note:** In Next.js 16, `next build` does not run the linter automatically.
 
----
 
-## Deployment
-
-The site is deployed to **GitHub Pages** via a GitHub Actions workflow.
-
-### How it works
-
-1. Push to `master` (or `main`) triggers `.github/workflows/deploy.yml`
-2. The workflow runs `npm ci && npm run build`
-3. The `next.config.ts` detects `GITHUB_ACTIONS=true` and applies:
-   - `output: "export"` — generates static HTML/CSS/JS into `./out`
-   - `basePath: "/Mitsubridge"` — prefixes all asset URLs for the sub-path
-   - `trailingSlash: true` — cleaner URLs
-   - `images: { unoptimized: true }` — bypasses Next.js image optimizer
-4. The `./out` folder is uploaded as a Pages artifact
-5. The `deploy-pages` action publishes it
-
-### Live URL
-
-```
-https://sushrutingle.github.io/Mitsubridge/
-```
-
-### Manual deploy
-
-Go to **Actions** → **Deploy to GitHub Pages** → **Run workflow**.
-
-### One-time setup required
-
-In your GitHub repo: **Settings → Pages → Source: GitHub Actions**.
-
----
 
 ## Configuration Files
 
