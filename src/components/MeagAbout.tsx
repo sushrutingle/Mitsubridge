@@ -45,14 +45,16 @@ export default function MeagAbout() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="overflow-hidden rounded-3xl">
-              <div
-                className="aspect-[4/5] w-full bg-cover bg-center"
-                style={{
-                  backgroundImage:
-                    "url('https://images.unsplash.com/photo-1523050854058-8df90110c7f1?w=800&q=75')",
-                }}
-              />
+            <div className="overflow-hidden rounded-3xl shadow-lg">
+              <div className="aspect-video w-full">
+                <iframe
+                  src="https://www.youtube.com/embed/IOozXb9jAF8"
+                  title="MEAG Programme Overview"
+                  className="h-full w-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
             </div>
           </motion.div>
 
