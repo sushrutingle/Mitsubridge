@@ -83,14 +83,10 @@ export async function getBrochures() {
 }
 
 export async function getHomePageContent() {
-  const [hero, testimonials, thoughtLeadership, newsItems, brochures] =
-    await Promise.all([
-      getHeroSection(),
-      getTestimonials(),
-      getThoughtLeadership(),
-      getNews(),
-      getBrochures(),
-    ]);
+  const [hero, testimonials] = await Promise.all([
+    getHeroSection(),
+    getTestimonials(),
+  ]);
 
-  return { hero, testimonials, thoughtLeadership, newsItems, brochures };
+  return { hero, testimonials };
 }

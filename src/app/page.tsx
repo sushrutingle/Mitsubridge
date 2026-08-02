@@ -6,15 +6,12 @@ import ExpertiseSection from "@/components/ExpertiseSection";
 import AboutSection from "@/components/AboutSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import PartnersSection from "@/components/PartnersSection";
-import InsightsSection from "@/components/InsightsSection";
-import BrochuresSection from "@/components/BrochuresSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { getHomePageContent } from "@/sanity/queries";
 
 export default async function Home() {
-  const { hero, testimonials, thoughtLeadership, newsItems, brochures } =
-    await getHomePageContent();
+  const { hero, testimonials } = await getHomePageContent();
 
   return (
     <>
@@ -32,11 +29,6 @@ export default async function Home() {
       <AboutSection />
       <TestimonialsSection testimonials={testimonials} />
       <PartnersSection />
-      <InsightsSection
-        thoughtLeadership={thoughtLeadership}
-        newsItems={newsItems}
-      />
-      <BrochuresSection brochures={brochures} />
       <CTASection />
       <Footer />
     </>
