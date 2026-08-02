@@ -10,13 +10,17 @@ import MeagLearningModels from "@/components/MeagLearningModels";
 import MeagAccreditation from "@/components/MeagAccreditation";
 import MeagCareerPathways from "@/components/MeagCareerPathways";
 import MeagCTA from "@/components/MeagCTA";
+import { getVideos } from "@/sanity/queries";
 
-export default function MeagPage() {
+export default async function MeagPage() {
+  const videos = await getVideos();
+  const primaryVideo = videos[0]?.youtubeUrl ?? null;
+
   return (
     <>
       <Navbar />
       <MeagHero />
-      <MeagAbout />
+      <MeagAbout youtubeUrl={primaryVideo} />
       <MeagCrisisSection />
       <MeagVisionMission />
       <MeagStudentBenefits />
