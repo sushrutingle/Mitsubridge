@@ -14,6 +14,7 @@ const nextConfig: NextConfig = {
       process.env.NEXT_PUBLIC_SANITY_DATASET || "production",
     NEXT_PUBLIC_SANITY_API_VERSION:
       process.env.NEXT_PUBLIC_SANITY_API_VERSION || "2024-03-01",
+    NEXT_PUBLIC_BASE_PATH: isDeploy ? "/Mitsubridge" : "",
   },
 };
 

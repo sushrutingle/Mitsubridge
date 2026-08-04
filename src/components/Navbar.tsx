@@ -46,7 +46,7 @@ export default function Navbar() {
       >
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src={scrolled ? "/images/Mitsubridge_logo_navy.png" : "/images/Mitsubridge_logo_white.png"}
+            src={scrolled ? `${process.env.NEXT_PUBLIC_BASE_PATH}/images/Mitsubridge_logo_navy.png` : `${process.env.NEXT_PUBLIC_BASE_PATH}/images/Mitsubridge_logo_white.png`}
             alt="MitsuBridge"
             width={48}
             height={48}
