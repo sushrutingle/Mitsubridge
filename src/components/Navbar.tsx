@@ -11,7 +11,7 @@ const navLinks = [
   { label: "Global", href: "/global" },
   { label: "MEAG", href: "/meag" },
   { label: "About", href: "/#about" },
-  { label: "Insights", href: "/#insights" },
+  { label: "Insights", href: "/meag#insights" },
   { label: "Contact", href: "/#contact" },
 ];
 

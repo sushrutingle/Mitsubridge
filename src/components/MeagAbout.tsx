@@ -2,6 +2,11 @@
 
 import { motion } from "framer-motion";
 import { Shield, Lightbulb, Wrench, Globe } from "lucide-react";
+import { youtubeEmbedUrl } from "@/sanity/utils";
+
+interface MeagAboutProps {
+  youtubeUrl?: string | null;
+}
 
 const features = [
   {
@@ -30,7 +35,9 @@ const features = [
   },
 ];
 
-export default function MeagAbout() {
+export default function MeagAbout({ youtubeUrl }: MeagAboutProps) {
+  const embedSrc = youtubeEmbedUrl(youtubeUrl) ?? "https://www.youtube.com/embed/IOozXb9jAF8";
+
   return (
     <section
       id="meag-programme"
@@ -48,7 +55,7 @@ export default function MeagAbout() {
             <div className="overflow-hidden rounded-3xl shadow-lg">
               <div className="aspect-video w-full">
                 <iframe
-                  src="https://www.youtube.com/embed/IOozXb9jAF8"
+                  src={embedSrc}
                   title="MEAG Programme Overview"
                   className="h-full w-full"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

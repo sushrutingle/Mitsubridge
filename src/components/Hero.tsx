@@ -2,20 +2,65 @@
 
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
+import { imageUrl } from "@/sanity/utils";
+import type { SanityImageSource } from "@/sanity/types";
 
-export default function Hero() {
+interface HeroProps {
+  heading?: string;
+  subheading?: string;
+  ctaText?: string;
+  ctaLink?: string;
+  backgroundImage?: SanityImageSource | null;
+}
+
+function renderHeading(text: string | undefined) {
+  if (!text) {
+    return (
+      <>
+        Executive AI
+        <br />
+        <span className="text-gold">Guild</span>
+      </>
+    );
+  }
+  const parts = text.trim().split(/\s+/);
+  if (parts.length < 2) {
+    return <span className="text-gold">{text}</span>;
+  }
+  const last = parts[parts.length - 1];
+  const rest = parts.slice(0, -1).join(" ");
+  return (
+    <>
+      {rest}
+      <br />
+      <span className="text-gold">{last}</span>
+    </>
+  );
+}
+
+export default function Hero({
+  heading,
+  subheading,
+  ctaText,
+  ctaLink,
+  backgroundImage,
+}: HeroProps) {
   const router = useRouter();
-  const scrollTo = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-  };
+
+  const bgUrl = backgroundImage
+    ? imageUrl(backgroundImage, { width: 1600, quality: 75 })
+    : null;
+
+  const meagHref = ctaLink ?? "/meag";
 
   return (
     <section className="relative h-[90vh] min-h-[600px] w-full overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=75')",
+          backgroundImage: bgUrl
+            ? `url('${bgUrl}')`
+            : "url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=75')",
         }}
       />
       <div className="absolute inset-0 bg-gradient-to-br from-navy/85 via-navy/65 to-navy/75" />
@@ -27,29 +72,27 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2 }}
           className="flex flex-1 cursor-pointer items-end overflow-hidden"
-          onClick={() => router.push("/meag")}
+          onClick={() => router.push(meagHref)}
         >
           <div className="p-8 md:p-12 lg:p-16 xl:pl-20">
             <span className="mb-3 inline-block rounded-full border border-gold/50 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-gold">
               Division One
             </span>
             <h2 className="font-heading text-3xl leading-tight text-white md:text-4xl lg:text-5xl">
-              Executive AI
-              <br />
-              <span className="text-gold">Guild</span>
+              {renderHeading(heading)}
             </h2>
             <p className="mt-4 max-w-md text-sm leading-relaxed text-white/80 md:text-base">
-              CPD-certified AI programmes, executive workshops, and governance
-              frameworks for the AI-powered future.
+              {subheading ||
+                "CPD-certified AI programmes, executive workshops, and governance frameworks for the AI-powered future."}
             </p>
             <button
               onClick={(e) => {
                 e.stopPropagation();
-                router.push("/meag");
+                router.push(meagHref);
               }}
               className="mt-6 rounded-[20px] border-2 border-white/30 bg-white/10 px-8 py-3 text-sm font-semibold tracking-wide text-white backdrop-blur-sm transition-all duration-300 hover:border-gold hover:bg-gold/20 hover:scale-105"
             >
-              Discover MEAG
+              {ctaText ?? "Discover MEAG"}
             </button>
           </div>
         </motion.div>
