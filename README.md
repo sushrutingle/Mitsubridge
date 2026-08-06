@@ -157,33 +157,14 @@ Schema definitions live in `src/sanity/schemas/`, GROQ queries in `src/sanity/qu
 2. Sign in with the Sanity account that owns the project.
 3. Add content under the document types in the left sidebar. Changes are fetched at build time, so run `npm run build` (or redeploy) to publish them to the site.
 
-### CORS origins
-
-Add these origins in Sanity (Manage → API → CORS origins, *with* credentials):
-
-- `http://localhost:3000` — local development
-- `https://sushrutingle.github.io` — production (GitHub Pages)
-
-### Deploying with Sanity
-
-The GitHub Actions workflow reads three repository **Secrets**:
-
-| Secret | Value |
-|---|---|
-| `NEXT_PUBLIC_SANITY_PROJECT_ID` | Your Sanity project ID |
-| `NEXT_PUBLIC_SANITY_DATASET` | e.g. `production` |
-| `NEXT_PUBLIC_SANITY_API_VERSION` | e.g. `2024-03-01` |
-
-Add them at Settings → Secrets and variables → Actions. Without them, the build still succeeds but renders placeholder/static content.
-
----
+### CORS origins added
 
 ## Getting Started
 
 ### Prerequisites
 
 - Node.js 20.9+
-- A Sanity project (free tier) with its Project ID and dataset
+- A Sanity project with its Project ID and dataset
 
 ### Install
 
@@ -287,7 +268,7 @@ Replace these with your official assets.
 
 ## Image Credits
 
-Hero and section background images are sourced from Unsplash. Replace the URLs in the respective components before production deployment.
+Hero and section background images are sourced from Unsplash.
 
 Key image locations:
 
