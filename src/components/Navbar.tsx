@@ -29,7 +29,7 @@ export default function Navbar() {
   const isActive = (href: string) => {
     if (href === "/global") return pathname === "/global";
     if (href === "/meag") return pathname === "/meag";
-    return pathname === "/" && href.startsWith("/#");
+    return false;
   };
 
   return (
