@@ -70,9 +70,7 @@ export default function MeagLearningModels() {
                 <p className="mt-4 leading-relaxed text-gray-500">
                   {item.description}
                 </p>
-                <button className="mt-6 rounded-[20px] border-2 border-gold px-6 py-2 text-sm font-semibold tracking-wide text-gold transition-all duration-300 hover:bg-gold hover:text-white hover:scale-105">
-                  Learn More
-                </button>
+
               </motion.div>
             );
           })}
