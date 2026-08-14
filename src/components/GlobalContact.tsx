@@ -38,10 +38,10 @@ export default function GlobalContact() {
                 Email
               </h3>
               <a
-                href="mailto:shane@mitsubridgeglobal.co.uk"
+                href="mailto:admissions@mitsubridgeglobal.co.uk"
                 className="mt-2 block text-sm text-gray-500 transition-colors hover:text-gold"
               >
-                shane@mitsubridgeglobal.co.uk
+                admissions@mitsubridgeglobal.co.uk
               </a>
             </div>
 

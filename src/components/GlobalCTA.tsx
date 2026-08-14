@@ -32,13 +32,13 @@ export default function GlobalCTA() {
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
-              href="mailto:shane@mitsubridgeglobal.co.uk"
+              href="mailto:admissions@mitsubridgeglobal.co.uk"
               className="rounded-[20px] border-2 border-gold bg-gold px-8 py-3 text-sm font-semibold tracking-wide text-white transition-all duration-300 hover:bg-gold/90 hover:scale-105"
             >
               Contact Us
             </a>
             <a
-              href="mailto:shane@mitsubridgeglobal.co.uk"
+              href="mailto:admissions@mitsubridgeglobal.co.uk"
               className="rounded-[20px] border-2 border-white/30 px-8 py-3 text-sm font-semibold tracking-wide text-white transition-all duration-300 hover:border-gold hover:bg-gold/10 hover:scale-105"
             >
               Schedule a Consultation
@@ -48,10 +48,10 @@ export default function GlobalCTA() {
           <div className="mt-10 inline-flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-6 py-4 backdrop-blur-sm">
             <Mail size={20} className="text-gold" />
             <a
-              href="mailto:shane@mitsubridgeglobal.co.uk"
+              href="mailto:admissions@mitsubridgeglobal.co.uk"
               className="text-sm font-medium text-white/90 transition-colors hover:text-gold"
             >
-              shane@mitsubridgeglobal.co.uk
+              admissions@mitsubridgeglobal.co.uk
             </a>
           </div>
         </motion.div>
