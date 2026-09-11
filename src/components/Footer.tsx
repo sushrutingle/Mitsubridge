@@ -87,7 +87,9 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3 text-sm text-white/60">
                 <Mail size={16} className="mt-0.5 shrink-0 text-gold" />
-                <a href="mailto:admissions@mitsubridgeglobal.co.uk" className="transition-colors duration-300 hover:text-gold">admissions@mitsubridgeglobal.co.uk</a>
+                <a href="mailto:admissions@mitsubridgeglobal.co.uk" className="transition-colors duration-300 hover:text-gold">
+                  admissions@mitsubridgeglobal.co.uk
+                </a>
               </li>
             </ul>
           </div>
