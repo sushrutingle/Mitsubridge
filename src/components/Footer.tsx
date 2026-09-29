@@ -93,7 +93,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3 text-sm text-white/60">
                 <Shield size={16} className="mt-0.5 shrink-0 text-gold" />
-                <a href="/privacy" className="transition-colors duration-300 hover:text-gold">
+                <a href={`${process.env.NEXT_PUBLIC_BASE_PATH}/privacy/`} className="transition-colors duration-300 hover:text-gold">
                   Privacy Policy
                 </a>
               </li>

@@ -7,18 +7,21 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const navLinks = [
-  { label: "Global", href: "/global" },
-  { label: "MEAG", href: "/meag" },
-  { label: "About", href: "/#about" },
-  { label: "Insights", href: "/meag#insights" },
-  { label: "Contact", href: "/#contact" },
-  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Global", href: `${basePath}/global` },
+  { label: "MEAG", href: `${basePath}/meag` },
+  { label: "About", href: `${basePath}/#about` },
+  { label: "Insights", href: `${basePath}/meag#insights` },
+  { label: "Contact", href: `${basePath}/#contact` },
+  { label: "Privacy Policy", href: `${basePath}/privacy/` },
 ];
 
 export default function Navbar() {
   const pathname = usePathname();
-  const isPrivacyPage = pathname === "/privacy";
+  const privacyPath = `${basePath}/privacy/`;
+  const isPrivacyPage = pathname === privacyPath || pathname === `${basePath}/privacy`;
   const [scrolled, setScrolled] = useState(isPrivacyPage);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -29,8 +32,8 @@ export default function Navbar() {
   }, [isPrivacyPage]);
 
   const isActive = (href: string) => {
-    if (href === "/global") return pathname === "/global";
-    if (href === "/meag") return pathname === "/meag";
+    if (href === `${basePath}/global`) return pathname === `${basePath}/global`;
+    if (href === `${basePath}/meag`) return pathname === `${basePath}/meag`;
     return false;
   };
 
