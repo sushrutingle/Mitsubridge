@@ -13,18 +13,20 @@ const navLinks = [
   { label: "About", href: "/#about" },
   { label: "Insights", href: "/meag#insights" },
   { label: "Contact", href: "/#contact" },
+  { label: "Privacy Policy", href: "/privacy" },
 ];
 
 export default function Navbar() {
   const pathname = usePathname();
-  const [scrolled, setScrolled] = useState(false);
+  const isPrivacyPage = pathname === "/privacy";
+  const [scrolled, setScrolled] = useState(isPrivacyPage);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    const handleScroll = () => setScrolled(window.scrollY > 50 || isPrivacyPage);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isPrivacyPage]);
 
   const isActive = (href: string) => {
     if (href === "/global") return pathname === "/global";
