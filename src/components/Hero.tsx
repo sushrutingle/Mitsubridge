@@ -83,7 +83,7 @@ export default function Hero({
             </h2>
             <p className="mt-4 max-w-md text-sm leading-relaxed text-white/80 md:text-base">
               {subheading ||
-                "CPD-certified AI programmes, executive workshops, and governance frameworks for the AI-powered future."}
+                "UK CPD-certified AI training programmes that build practical skills to understand, apply and orchestrate AI for real-world careers."}
             </p>
             <button
               onClick={(e) => {
