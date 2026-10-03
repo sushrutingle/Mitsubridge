@@ -84,7 +84,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="/#contact"
+            href={`${basePath}/#contact`}
             className={`rounded-[20px] border-2 px-6 py-2.5 text-sm font-semibold tracking-wide transition-all duration-300 hover:scale-105 ${
               scrolled
                 ? "border-gold text-gold hover:bg-gold hover:text-white"
@@ -128,7 +128,7 @@ export default function Navbar() {
                 </Link>
               ))}
               <Link
-                href="/#contact"
+                href={`${basePath}/#contact`}
                 className="rounded-[20px] border-2 border-gold px-6 py-2.5 text-center text-sm font-semibold tracking-wide text-gold transition-all duration-300 hover:bg-gold hover:text-white"
                 onClick={() => setMobileOpen(false)}
               >
