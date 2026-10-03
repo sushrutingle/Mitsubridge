@@ -24,31 +24,6 @@ const meagBullets = [
   "Digital Portfolio Development",
 ];
 
-function LogoPlaceholder({ label }: { label: string }) {
-  return (
-    <div className="flex h-[72px] w-[72px] items-center justify-center rounded-2xl border-2 border-light-gray bg-white">
-      <div className="text-center">
-        <svg
-          className="mx-auto h-6 w-6 text-gray-300"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-          <circle cx="8.5" cy="8.5" r="1.5" />
-          <polyline points="21 15 16 10 5 21" />
-        </svg>
-        <span className="mt-1 block text-[9px] font-medium uppercase tracking-[0.15em] text-gray-300">
-          {label}
-        </span>
-      </div>
-    </div>
-  );
-}
-
 function JourneyCard({
   title,
   description,
@@ -57,7 +32,6 @@ function JourneyCard({
   gradientFrom,
   gradientTo,
   id,
-  logoLabel,
   isRoute,
 }: {
   title: string;
@@ -67,7 +41,6 @@ function JourneyCard({
   gradientFrom: string;
   gradientTo: string;
   id: string;
-  logoLabel: string;
   isRoute?: boolean;
 }) {
   const router = useRouter();
@@ -94,7 +67,6 @@ function JourneyCard({
       <div className="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-gold to-gold/60 transition-all duration-500 group-hover:w-full" />
 
       <div className="relative z-10">
-        <LogoPlaceholder label={logoLabel} />
         <h3 className="font-heading mt-6 text-2xl leading-tight text-navy md:text-3xl">
           {title}
         </h3>
@@ -144,17 +116,6 @@ export default function JourneySection() {
 
         <div className="mt-16 grid gap-8 md:grid-cols-2">
           <JourneyCard
-            title="Global Market Expansion"
-            description="Expand into international markets with tailored business development, operational support, and strategic partnerships focused on manufacturing and semiconductor industries."
-            bullets={globalBullets}
-            buttonLabel="Explore Global"
-            gradientFrom="from-navy"
-            gradientTo="to-navy/10"
-            id="/global"
-            logoLabel="Division Logo"
-            isRoute
-          />
-          <JourneyCard
             title="Executive AI Guild (MEAG)"
             description="Build executive AI capability through CPD-certified programmes, leadership workshops, governance frameworks, and applied AI learning without requiring technical expertise."
             bullets={meagBullets}
@@ -162,7 +123,16 @@ export default function JourneySection() {
             gradientFrom="from-gold"
             gradientTo="to-gold/10"
             id="/meag"
-            logoLabel="Division Logo"
+            isRoute
+          />
+          <JourneyCard
+            title="Global Market Expansion"
+            description="Expand into international markets with tailored business development, operational support, and strategic partnerships focused on manufacturing and semiconductor industries."
+            bullets={globalBullets}
+            buttonLabel="Explore Global"
+            gradientFrom="from-navy"
+            gradientTo="to-navy/10"
+            id="/global"
             isRoute
           />
         </div>
