@@ -13,8 +13,6 @@ const itemVariants = {
 };
 
 export default function PrivacyPolicy() {
-  const lastUpdated = "September 30, 2026";
-
   return (
     <section className="min-h-screen bg-white pt-32 pb-20 px-6 lg:px-12">
       <motion.div
@@ -28,217 +26,137 @@ export default function PrivacyPolicy() {
           variants={itemVariants}
         >
           <h1 className="font-heading text-4xl md:text-5xl font-bold text-navy mb-6">
-            Privacy Policy
+            MEAG Privacy Policy
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Last updated: {lastUpdated}
+            Effective Date: October 1, 2026<br />
+            Last Updated: October 1, 2026
           </p>
         </motion.div>
 
         <motion.div
-          className="prose prose-navy max-w-none space-y-12"
+          className="prose prose-navy max-w-none space-y-10"
           variants={itemVariants}
         >
           <article>
-            <h2>1. Introduction</h2>
-            <p>
-              MitsuBridge (&ldquo;we&rdquo;, &ldquo;our&rdquo;, &ldquo;us&rdquo;) is committed to protecting your
-              personal information and your right to privacy. This Privacy Policy
-              explains how we collect, use, disclose, and safeguard your
-              information when you visit our website, use our services, or
-              interact with us in other ways.
+            <p className="text-gray-700 leading-relaxed">
+              Welcome to MitsuBridge Executive AI Group (MEAG) (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;). We respect your privacy and are committed to protecting the personal data you share with us when you visit our website at mitsubridgeglobal.co.uk (the &ldquo;Site&rdquo;) or interact with our educational and professional development programs.
             </p>
-            <p>
-              We are the data controller for the personal data processed through
-              our website and services. Our contact details are provided in
-              Section 14 below.
+            <p className="text-gray-700 leading-relaxed">
+              This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit or interact with our Site, advertising channels, or service offerings.
             </p>
           </article>
 
           <article>
-            <h2>2. Information We Collect</h2>
-            <h3>2.1 Personal Data You Provide</h3>
-            <p>We collect personal data that you voluntarily provide to us, including:</p>
-            <ul>
-              <li>Name, email address, phone number, and company/organization details</li>
-              <li>Information submitted through contact forms, consultation bookings, or newsletter sign-ups</li>
-              <li>Communications you send to us (emails, messages, inquiries)</li>
-              <li>Information provided during business discussions or service delivery</li>
+            <h2>1. Information We Collect</h2>
+            <p className="text-gray-700 leading-relaxed">We collect personal information through multiple channels as you interact with our programs, website, and digital outreach:</p>
+            
+            <h3>A. Information You Provide Directly</h3>
+            <p className="text-gray-700 leading-relaxed">When you fill out contact forms, register for an inquiry, sign up for a newsletter, or communicate with us via WhatsApp or email, you may provide:</p>
+            <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <li><strong>Contact Information:</strong> Full name, email address, phone number, school/institution name, and mailing address.</li>
+              <li><strong>Inquiry & Program Data:</strong> Messages, feedback, student/grade information, or institutional requests.</li>
+              <li><strong>Account Credentials:</strong> Username and password (if account registration is enabled for portals).</li>
             </ul>
 
-            <h3>2.2 Automatically Collected Data</h3>
-            <p>When you access our website, we automatically collect:</p>
-            <ul>
-              <li>IP address, browser type, operating system, and device information</li>
-              <li>Pages visited, time spent, referring URLs, and navigation patterns</li>
-              <li>Cookies and similar tracking technologies (see Section 10)</li>
+            <h3>B. Information Collected Automatically</h3>
+            <p className="text-gray-700 leading-relaxed">When you visit our Site, our servers and integrated third-party tools automatically log technical data:</p>
+            <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <li><strong>Device & Usage Data:</strong> IP address, browser type, operating system, referring URLs, pages viewed, time spent, and navigation pathways.</li>
+              <li><strong>Cookies & Tracking Technologies:</strong> Small data files stored on your device that remember preferences, track sessions, and optimize web performance.</li>
             </ul>
 
-            <h3>2.3 Data from Third Parties</h3>
-            <p>We may receive information about you from:</p>
-            <ul>
-              <li>Analytics providers (e.g., Google Analytics)</li>
-              <li>Social media platforms when you interact with our content</li>
-              <li>Partners or referral sources with your consent</li>
-            </ul>
+            <h3>C. Information from Ad Funnels & Messaging Platforms</h3>
+            <p className="text-gray-700 leading-relaxed">When you interact with our digital marketing campaigns (e.g., Meta/Instagram ads) or message our business accounts (e.g., WhatsApp Business API), we collect your profile name, contact details, and the contents of your chat interactions to facilitate program inquiries and registrations.</p>
           </article>
 
           <article>
-            <h2>3. How We Use Your Information</h2>
-            <p>We process your personal data for the following purposes:</p>
-            <ul>
-              <li><strong>Service Delivery:</strong> To provide international business expansion and AI education services</li>
-              <li><strong>Communication:</strong> To respond to inquiries, send updates, and manage bookings</li>
-              <li><strong>Marketing:</strong> To send promotional content (with your consent where required)</li>
-              <li><strong>Analytics:</strong> To understand website usage and improve our services</li>
-              <li><strong>Legal Compliance:</strong> To fulfill legal obligations and protect our rights</li>
-              <li><strong>Security:</strong> To detect and prevent fraud, abuse, and security incidents</li>
+            <h2>2. How We Use Your Information</h2>
+            <p className="text-gray-700 leading-relaxed">We use your information for legitimate business and educational purposes, including:</p>
+            <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <li><strong>Delivering Educational Services:</strong> Processing registrations for the MEAG Junior AI Achievement Award and institutional programs.</li>
+              <li><strong>Communication & Support:</strong> Responding to inquiries, coordinating with school principals and parents, and providing service updates.</li>
+              <li><strong>Marketing & Outreach:</strong> Delivering promotional communications regarding our UK CPD-certified programs (where permitted by law and subject to opt-out rights).</li>
+              <li><strong>Analytics & Performance Optimization:</strong> Analyzing visitor interaction data and ad performance via tools like Google Analytics and Meta Pixel to improve user experience.</li>
+              <li><strong>Legal Compliance & Security:</strong> Preventing fraudulent activities, enforcing our terms, and complying with applicable statutory regulations.</li>
             </ul>
           </article>
 
           <article>
-            <h2>4. Legal Basis for Processing (GDPR)</h2>
-            <p>Under the UK GDPR and EU GDPR, we rely on the following legal bases:</p>
-            <ul>
-              <li><strong>Contract Performance:</strong> Processing necessary to deliver services you request</li>
-              <li><strong>Legitimate Interests:</strong> Business operations, analytics, security, and improvement</li>
-              <li><strong>Consent:</strong> For marketing communications and non-essential cookies</li>
-              <li><strong>Legal Obligation:</strong> Compliance with applicable laws and regulations</li>
-              <li><strong>Vital Interests:</strong> In rare cases to protect someone&apos;s life</li>
+            <h2>3. How We Share Your Information & Third-Party Tools</h2>
+            <p className="text-gray-700 leading-relaxed">We do not sell your personal information. We share data only with trusted partners necessary to run our operations:</p>
+            <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <li><strong>Service Providers:</strong> Third-party vendors who perform services on our behalf (e.g., cloud hosting, email delivery platforms, CRM software, and payment processors).</li>
+              <li><strong>Advertising & Analytics Partners:</strong> Platforms such as Google Analytics (for website traffic analysis) and Meta (for managing ad conversions and lead forms).</li>
+              <li><strong>Legal Requirements:</strong> If required by law, court order, or governmental regulation, or to protect our legal rights, property, or safety.</li>
+              <li><strong>Business Transfers:</strong> In connection with a corporate merger, acquisition, asset sale, or business restructuring.</li>
             </ul>
           </article>
 
           <article>
-            <h2>5. Data Sharing and Third Parties</h2>
-            <p>We do not sell your personal data. We may share it with:</p>
-            <ul>
-              <li><strong>Service Providers:</strong> Hosting, analytics, email, CRM, and payment processors (under data processing agreements)</li>
-              <li><strong>Professional Advisors:</strong> Legal, accounting, and compliance advisors</li>
-              <li><strong>Partners:</strong> With your explicit consent for joint offerings</li>
-              <li><strong>Authorities:</strong> When required by law, regulation, or legal process</li>
-              <li><strong>Business Transfers:</strong> In connection with a merger, acquisition, or sale of assets</li>
+            <h2>4. Cross-Border Data Transfers (UK, UAE, and India)</h2>
+            <p className="text-gray-700 leading-relaxed">Because MEAG operates internationally across the United Kingdom, the United Arab Emirates (Dubai Free Zones), and India, personal data collected through our Site and outreach programs may be transferred to, stored, and processed in servers located outside your home country.</p>
+            <p className="text-gray-700 leading-relaxed">We ensure that any international data transfers comply with applicable data protection standards, implementing appropriate technical and organizational security measures to protect your information across borders.</p>
+          </article>
+
+          <article>
+            <h2>5. Cookies and Tracking Technologies</h2>
+            <p className="text-gray-700 leading-relaxed">We utilize cookies and similar tracking tools (such as the Meta Pixel and Google Analytics tags):</p>
+            <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <li><strong>Essential Cookies:</strong> Necessary for core website functionality and security.</li>
+              <li><strong>Analytics & Performance Cookies:</strong> Help us aggregate visitor data to understand user journeys.</li>
+              <li><strong>Marketing & Conversion Cookies:</strong> Used to measure the effectiveness of our social media ad campaigns.</li>
+            </ul>
+            <p className="text-gray-700 leading-relaxed"><strong>Managing Cookies:</strong> You can adjust your browser settings to refuse or delete cookies, though doing so may impact certain Site features.</p>
+          </article>
+
+          <article>
+            <h2>6. Your Privacy Rights</h2>
+            <p className="text-gray-700 leading-relaxed">Depending on your jurisdiction (including India&apos;s DPDP Act or UK/EU GDPR frameworks where applicable), you may have specific rights regarding your data:</p>
+            <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <li><strong>Access & Portability:</strong> Request a copy of the personal data we hold about you.</li>
+              <li><strong>Correction:</strong> Request the correction of inaccurate or incomplete records.</li>
+              <li><strong>Deletion:</strong> Request the deletion of your personal data, subject to legal and statutory retention obligations.</li>
+              <li><strong>Opt-Out of Marketing:</strong> Unsubscribe from promotional communications at any time via the link in our emails or by messaging our support line.</li>
+              <li><strong>Withdraw Consent:</strong> Where data processing relies on your consent, you may withdraw it at any time.</li>
+            </ul>
+            <p className="text-gray-700 leading-relaxed">To exercise any of these rights, please contact us at <a href="mailto:admissions@mitsubridgeglobal.co.uk" className="text-gold hover:underline">admissions@mitsubridgeglobal.co.uk</a>.</p>
+          </article>
+
+          <article>
+            <h2>7. Data Security and Retention</h2>
+            <p className="text-gray-700 leading-relaxed"><strong>Data Security:</strong> We implement strict technical, administrative, and organizational security measures designed to safeguard your personal data against unauthorized access, loss, alteration, or disclosure.</p>
+            <p className="text-gray-700 leading-relaxed"><strong>Data Retention:</strong> We retain your personal data only for as long as necessary to fulfill the educational, commercial, or legal purposes outlined in this policy.</p>
+          </article>
+
+          <article>
+            <h2>8. Children&apos;s Privacy and Parental Consent (Grades 7&ndash;9 Focus)</h2>
+            <p className="text-gray-700 leading-relaxed">Our institutional programs, including the MEAG Junior AI Achievement Award, are designed for students in Grades 7&ndash;9 (minors typically aged 12&ndash;15).</p>
+            <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <li>We do not knowingly collect personal data directly from minors without proper authorization.</li>
+              <li>Where student information is collected, it is processed either directly through institutional school partnerships or with verifiable parental/guardian consent, in compliance with applicable child privacy protections and the Indian Digital Personal Data Protection (DPDP) Act.</li>
+              <li>If you believe a minor has submitted personal data without required parental consent, please contact us immediately so we can securely delete it.</li>
             </ul>
           </article>
 
           <article>
-            <h2>6. International Data Transfers</h2>
-            <p>
-              Our services operate globally. Your data may be transferred to and
-              processed in countries outside the UK/EEA (including the United States
-              and India). We ensure appropriate safeguards through:
-            </p>
-            <ul>
-              <li>UK/EU Standard Contractual Clauses (SCCs)</li>
-              <li>Adequacy decisions where applicable</li>
-              <li>Binding Corporate Rules or approved certification mechanisms</li>
-            </ul>
+            <h2>9. Third-Party Links</h2>
+            <p className="text-gray-700 leading-relaxed">Our Site may contain links to external websites, social media platforms, or partner portals not operated by us. We are not responsible for the privacy practices or content of third-party platforms and encourage you to review their individual privacy policies.</p>
           </article>
 
           <article>
-            <h2>7. Data Retention</h2>
-            <p>We retain personal data only as long as necessary:</p>
-            <ul>
-              <li><strong>Contact/Inquiry Data:</strong> 3 years from last interaction</li>
-              <li><strong>Client/Service Records:</strong> 7 years after service completion (legal/accounting requirements)</li>
-              <li><strong>Marketing Data:</strong> Until you unsubscribe or 2 years of inactivity</li>
-              <li><strong>Analytics/Logs:</strong> 26 months (aggregated/anonymized thereafter)</li>
-              <li><strong>Legal Holds:</strong> Extended retention if required for legal proceedings</li>
-            </ul>
+            <h2>10. Updates to This Privacy Policy</h2>
+            <p className="text-gray-700 leading-relaxed">We may update this Privacy Policy periodically to reflect shifts in legal requirements, technological integrations, or operational practices. Any changes will be posted on this page with a revised Effective Date.</p>
           </article>
 
           <article>
-            <h2>8. Your Rights</h2>
-            <p>Under UK/EU data protection law, you have the right to:</p>
-            <ul>
-              <li><strong>Access:</strong> Request a copy of your personal data</li>
-              <li><strong>Rectification:</strong> Correct inaccurate or incomplete data</li>
-              <li><strong>Erasure:</strong> Request deletion (&ldquo;right to be forgotten&rdquo;)</li>
-              <li><strong>Restriction:</strong> Limit processing of your data</li>
-              <li><strong>Portability:</strong> Receive your data in a structured, machine-readable format</li>
-              <li><strong>Objection:</strong> Object to processing based on legitimate interests or direct marketing</li>
-              <li><strong>Withdraw Consent:</strong> Where processing is based on consent</li>
-              <li><strong>Complaint:</strong> Lodge a complaint with the ICO (UK) or your national DPA</li>
-            </ul>
-            <p>To exercise these rights, contact us using the details in Section 14.</p>
-          </article>
-
-          <article>
-            <h2>9. Cookies and Tracking Technologies</h2>
-            <p>Our website uses cookies and similar technologies:</p>
-            <ul>
-              <li><strong>Essential Cookies:</strong> Required for website functionality (cannot be disabled)</li>
-              <li><strong>Analytics Cookies:</strong> Help us understand usage (Google Analytics, with IP anonymization)</li>
-              <li><strong>Marketing Cookies:</strong> Enable personalized advertising (with your consent)</li>
-              <li><strong>Functional Cookies:</strong> Remember preferences and improve experience</li>
-            </ul>
-            <p>
-              You can manage cookie preferences through your browser settings or our
-              cookie banner. Disabling essential cookies may impair website functionality.
-            </p>
-          </article>
-
-          <article>
-            <h2>10. Security Measures</h2>
-            <p>We implement appropriate technical and organizational measures:</p>
-            <ul>
-              <li>Encryption in transit (TLS 1.2+) and at rest (AES-256)</li>
-              <li>Access controls, authentication, and authorization protocols</li>
-              <li>Regular security assessments and vulnerability scanning</li>
-              <li>Staff training on data protection and security awareness</li>
-              <li>Incident response and breach notification procedures</li>
-            </ul>
-            <p>
-              While we strive to protect your data, no internet transmission or
-              storage system is 100% secure.
-            </p>
-          </article>
-
-          <article>
-            <h2>11. Children&apos;s Privacy</h2>
-            <p>
-              Our services are not directed to individuals under 16 (or 13 in the US).
-              We do not knowingly collect personal data from children. If you believe
-              we have collected data from a child, please contact us immediately.
-            </p>
-          </article>
-
-          <article>
-            <h2>12. Changes to This Policy</h2>
-            <p>
-              We may update this Privacy Policy from time to time. We will notify
-              you of material changes by:
-            </p>
-            <ul>
-              <li>Posting the updated policy on this page with a revised &ldquo;Last updated&rdquo; date</li>
-              <li>Sending email notification for significant changes</li>
-              <li>Displaying a prominent notice on our website</li>
-            </ul>
-            <p>Your continued use of our services after changes constitutes acceptance.</p>
-          </article>
-
-          <article>
-            <h2>13. Third-Party Links</h2>
-            <p>
-              Our website may contain links to third-party websites, plugins, and
-              applications. We are not responsible for their privacy practices. We
-              encourage you to review their privacy policies before providing any
-              personal information.
-            </p>
-          </article>
-
-          <article>
-            <h2>14. Contact Us</h2>
-            <p>For questions, concerns, or to exercise your rights:</p>
-            <address className="not-italic">
-              <p><strong>MitsuBridge</strong></p>
-              <p>London, United Kingdom</p>
-              <p>Email: <a href="mailto:admissions@mitsubridgeglobal.co.uk" className="text-gold hover:underline">admissions@mitsubridgeglobal.co.uk</a></p>
-              <p>Phone: <a href="tel:+917304756419" className="text-gold hover:underline">+91 7304756419</a></p>
+            <h2>11. Contact Us</h2>
+            <p className="text-gray-700 leading-relaxed">If you have any questions, concerns, or requests regarding this Privacy Policy or how your data is handled, please reach out to us at:</p>
+            <address className="not-italic text-gray-700 leading-relaxed">
+              <p><strong>Entity Name:</strong> MitsuBridge Global Ltd</p>
+              <p><strong>Email:</strong> <a href="mailto:admissions@mitsubridgeglobal.co.uk" className="text-gold hover:underline">admissions@mitsubridgeglobal.co.uk</a></p>
+              <p><strong>Phone:</strong> <a href="tel:+917304756419" className="text-gold hover:underline">+91 73047 56419</a></p>
             </address>
-            <p className="mt-4">
-              For data protection inquiries, please include &ldquo;Data Protection&rdquo; in
-              the subject line.
-            </p>
           </article>
         </motion.div>
       </motion.div>
