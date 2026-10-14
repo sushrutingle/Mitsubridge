@@ -11,6 +11,16 @@ export const metadata: Metadata = {
 export default function ConsultationPage() {
   return (
     <>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function() {
+              var html = document.documentElement;
+              if (html) html.classList.add('white-navbar');
+            })();
+          `,
+        }}
+      />
       <Navbar />
       <ConsultationForm />
       <Footer />

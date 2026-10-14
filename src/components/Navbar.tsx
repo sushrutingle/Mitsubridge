@@ -21,15 +21,24 @@ const navLinks = [
 export default function Navbar() {
   const pathname = usePathname();
   const privacyPath = `${basePath}/privacy/`;
-  const isPrivacyPage = pathname === privacyPath || pathname === `${basePath}/privacy`;
-  const [scrolled, setScrolled] = useState(isPrivacyPage);
+  const consultationPath = `${basePath}/consultation/`;
+  
+  const isWhiteBgRoute = pathname === privacyPath || pathname === `${basePath}/privacy` || pathname === consultationPath || pathname === `${basePath}/consultation`;
+  const hasWhiteNavbarClass = typeof document !== "undefined" && document.documentElement.classList.contains("white-navbar");
+  
+  const isWhiteBgPage = isWhiteBgRoute || hasWhiteNavbarClass;
+  
+  const [scrolled, setScrolled] = useState(() => isWhiteBgPage);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50 || isPrivacyPage);
+    const handleScroll = () => {
+      const hasClass = document.documentElement.classList.contains("white-navbar");
+      setScrolled(window.scrollY > 50 || isWhiteBgRoute || hasClass);
+    };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isPrivacyPage]);
+  }, [isWhiteBgRoute]);
 
   const isActive = (href: string) => {
     if (href === `${basePath}/global`) return pathname === `${basePath}/global`;
