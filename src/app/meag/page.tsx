@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MeagHero from "@/components/MeagHero";
 import MeagAbout from "@/components/MeagAbout";
+import ProductCatalogue from "@/components/ProductCatalogue";
 import MeagCrisisSection from "@/components/MeagCrisisSection";
 import MeagVisionMission from "@/components/MeagVisionMission";
 import MeagStudentBenefits from "@/components/MeagStudentBenefits";
@@ -35,6 +36,7 @@ export default async function MeagPage() {
       <MeagAbout youtubeUrl={primaryVideo} />
       <MeagCrisisSection />
       <MeagVisionMission />
+      <ProductCatalogue />
       <MeagStudentBenefits />
       <MeagSchoolBenefits />
       <MeagLearningModels />
