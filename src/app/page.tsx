@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import JourneySection from "@/components/JourneySection";
 import StatsSection from "@/components/StatsSection";
 import ProductCatalogue from "@/components/ProductCatalogue";
+import VideoSection from "@/components/VideoSection";
 import MeagStudentBenefits from "@/components/MeagStudentBenefits";
 import AboutSection from "@/components/AboutSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -25,6 +26,11 @@ export default async function Home() {
         backgroundImage={hero?.backgroundImage ?? null}
       />
       <ProductCatalogue />
+      <VideoSection
+        videoId="HkwFplcSNLM"
+        title="MEAG AI Pathways"
+        description="Discover how our UK CPD-certified programmes transform academic learning into enterprise digital transformation."
+      />
       <StatsSection />
       <MeagStudentBenefits />
       <AboutSection />
