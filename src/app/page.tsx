@@ -24,9 +24,8 @@ export default async function Home() {
         ctaLink={hero?.ctaLink}
         backgroundImage={hero?.backgroundImage ?? null}
       />
-      <JourneySection />
-      <StatsSection />
       <ProductCatalogue />
+      <StatsSection />
       <MeagStudentBenefits />
       <AboutSection />
       <TestimonialsSection testimonials={testimonials} />
