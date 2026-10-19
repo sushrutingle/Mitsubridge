@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import JourneySection from "@/components/JourneySection";
 import StatsSection from "@/components/StatsSection";
+import ProductCatalogue from "@/components/ProductCatalogue";
 import MeagStudentBenefits from "@/components/MeagStudentBenefits";
 import AboutSection from "@/components/AboutSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -25,6 +26,7 @@ export default async function Home() {
       />
       <JourneySection />
       <StatsSection />
+      <ProductCatalogue />
       <MeagStudentBenefits />
       <AboutSection />
       <TestimonialsSection testimonials={testimonials} />
