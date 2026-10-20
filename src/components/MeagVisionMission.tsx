@@ -55,29 +55,6 @@ export default function MeagVisionMission() {
             </p>
           </motion.div>
         </div>
-
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {pillars.map((item, index) => {
-            const Icon = item.icon;
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.12 }}
-                className="group rounded-2xl border border-light-gray bg-white p-6 text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-lg hover:border-gold/30"
-              >
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-navy/5 text-navy transition-all duration-300 group-hover:bg-gold/10 group-hover:text-gold">
-                  <Icon size={28} />
-                </div>
-                <h4 className="font-heading mt-4 text-base font-semibold text-navy">
-                  {item.title}
-                </h4>
-              </motion.div>
-            );
-          })}
-        </div>
       </div>
     </section>
   );

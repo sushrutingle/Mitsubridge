@@ -93,28 +93,6 @@ export default function MeagAbout({ youtubeUrl }: MeagAboutProps) {
               who understand how AI creates value across business, research, and
               innovation.
             </p>
-
-            <div className="mt-8 grid grid-cols-2 gap-4">
-              {features.map((feature) => {
-                const Icon = feature.icon;
-                return (
-                  <div
-                    key={feature.title}
-                    className="rounded-xl border border-light-gray bg-light-bg p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
-                  >
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gold/10 text-gold">
-                      <Icon size={20} />
-                    </div>
-                    <h4 className="font-heading mt-3 text-sm font-semibold text-navy">
-                      {feature.title}
-                    </h4>
-                    <p className="mt-1 text-xs leading-relaxed text-gray-500">
-                      {feature.description}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
           </motion.div>
         </div>
       </div>

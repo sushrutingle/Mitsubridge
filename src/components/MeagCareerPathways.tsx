@@ -5,22 +5,42 @@ import { MapPin } from "lucide-react";
 
 const pathways = [
   {
+    flag: "IN",
+    country: "India",
+    opportunities: [
+      "Domestic Tech Giants & GCCs",
+      "High-Growth AI Startups",
+      "Engineering & Enterprise Hubs",
+    ],
+    gradient: "from-navy/5 to-navy/10",
+  },
+  {
     flag: "GB",
     country: "United Kingdom",
     opportunities: [
-      "Technology companies",
-      "Innovation labs",
-      "Research organisations",
+      "CPD-Recognized Tech Roles",
+      "London Financial & AI Labs",
+      "Research & Consulting Firms",
     ],
-    gradient: "from-navy/5 to-navy/10",
+    gradient: "from-gold/5 to-gold/10",
   },
   {
     flag: "US",
     country: "United States",
     opportunities: [
-      "Silicon Valley",
-      "AI companies",
-      "Technology internships",
+      "Silicon Valley & Tech Hubs",
+      "Enterprise AI Systems",
+      "Remote & Global Internships",
+    ],
+    gradient: "from-navy/5 to-gold/5",
+  },
+  {
+    flag: "PL",
+    country: "Poland",
+    opportunities: [
+      "European R&D & Tech Centers",
+      "Enterprise Software Engineering",
+      "Global Capability Centers (GCCs)",
     ],
     gradient: "from-gold/5 to-gold/10",
   },
@@ -28,9 +48,9 @@ const pathways = [
     flag: "SG",
     country: "Singapore",
     opportunities: [
-      "Commercial technology",
-      "AI consulting",
-      "Data ecosystems",
+      "Southeast Asian Tech Hubs",
+      "Commercial AI & Fintech",
+      "Enterprise Data Ecosystems",
     ],
     gradient: "from-navy/5 to-gold/5",
   },
@@ -59,9 +79,11 @@ export default function MeagCareerPathways() {
             Global Pathways
           </span>
           <h2 className="font-heading mt-6 text-3xl leading-tight text-navy md:text-4xl lg:text-5xl">
-            Where Our Students{" "}
-            <span className="text-gold">Can Go</span>
+            Global Career Mobility & Industry Networks
           </h2>
+          <p className="mt-4 text-base md:text-lg leading-relaxed text-gold/90 max-w-2xl mx-auto">
+            Connecting students to verified AI roles across international tech hubs and high-growth domestic sectors.
+          </p>
         </motion.div>
 
         <div className="mt-16 grid gap-8 md:grid-cols-3">
