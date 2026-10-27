@@ -55,7 +55,7 @@ export default function MeagHero() {
                 Partner With Us
               </button>
               <button
-                onClick={() => scrollTo("meag-programme")}
+                onClick={() => scrollTo("product-catalogue")}
                 className="rounded-[20px] border-2 border-white/30 bg-white/10 px-8 py-3 text-sm font-semibold tracking-wide text-white backdrop-blur-sm transition-all duration-300 hover:border-gold hover:bg-gold/20 hover:scale-105"
               >
                 Explore the Programme

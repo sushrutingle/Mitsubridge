@@ -180,7 +180,7 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
 
 export default function ProductCatalogue() {
   return (
-    <section className="bg-white px-6 py-28 md:py-36 lg:px-12">
+    <section id="product-catalogue" className="bg-white px-6 py-28 md:py-36 lg:px-12">
       <div className="mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
