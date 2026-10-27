@@ -1,6 +1,6 @@
 "use client";
 
-import { MapPin, Phone, Mail, Globe, X, Send, Shield } from "lucide-react";
+import { MapPin, Phone, Mail, Globe, X, Instagram, Facebook, Shield } from "lucide-react";
 
 const footerSections = [
   {
@@ -43,11 +43,22 @@ export default function Footer() {
                 <X size={18} />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/mitsubridge/?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white/60 transition-all duration-300 hover:border-gold hover:text-gold"
               >
-                <Send size={18} />
+                <Instagram size={18} />
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61594878226701#"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white/60 transition-all duration-300 hover:border-gold hover:text-gold"
+              >
+                <Facebook size={18} />
               </a>
             </div>
           </div>
