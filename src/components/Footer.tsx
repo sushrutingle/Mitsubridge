@@ -1,6 +1,6 @@
 "use client";
 
-import { MapPin, Phone, Mail, Globe, X, Instagram, Facebook, Shield } from "lucide-react";
+import { MapPin, Phone, Mail, Globe, X, Shield } from "lucide-react";
 
 const footerSections = [
   {
@@ -49,7 +49,9 @@ export default function Footer() {
                 aria-label="Instagram"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white/60 transition-all duration-300 hover:border-gold hover:text-gold"
               >
-                <Instagram size={18} />
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6zm4.75-2.75a1 1 0 110 2 1 1 0 010-2z"/>
+                </svg>
               </a>
               <a
                 href="https://www.facebook.com/profile.php?id=61594878226701#"
@@ -58,7 +60,9 @@ export default function Footer() {
                 aria-label="Facebook"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white/60 transition-all duration-300 hover:border-gold hover:text-gold"
               >
-                <Facebook size={18} />
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.891h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+                </svg>
               </a>
             </div>
           </div>
