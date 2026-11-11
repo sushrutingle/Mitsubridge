@@ -1,0 +1,28 @@
+# robots.txt
+# NOTE: robots.txt controls crawler access; it does NOT implement schema.org markup.
+# Organization Schema and EducationalOrganization Schema must be added as JSON-LD
+# in the <head> of your web pages. This file documents your official entity info
+# for search engines and AI scrapers as a reference.
+
+# Official Organization / EducationalOrganization details
+# Name: [Your Organization Name]
+# Type: EducationalOrganization / Organization
+# Accreditation: UK CPD (Continuing Professional Development)
+# Leadership: [Leadership Name / Title]
+# Contact: [contact@example.com] | [+91 XXX XXX XXXX]
+
+# Office Locations
+# 1. Wakad: 207/1, Sonigara Kesar, Wakad, Pune 411057
+# 2. Kharadi - World Trade Centre: 9/23, Tower 2, World Trade Center, Pune, Maharashtra, 400014
+
+User-agent: *
+Allow: /
+
+# Disallow private/admin areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /__debug__/
+
+# Sitemap location (update with your actual domain)
+Sitemap: https://mitsubridgeglobal.co.uk/sitemap.xml

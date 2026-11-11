@@ -97,6 +97,18 @@ export default function Footer() {
                 <span>London, United Kingdom</span>
               </li>
               <li className="flex items-start gap-3 text-sm text-white/60">
+                <MapPin size={16} className="mt-0.5 shrink-0 text-gold" />
+                <span>
+                   207/1, Sonigara Kesar, Wakad, Pune 411057,  Maharashtra - India
+                </span>
+              </li>
+              <li className="flex items-start gap-3 text-sm text-white/60">
+                <MapPin size={16} className="mt-0.5 shrink-0 text-gold" />
+                <span>
+                  9/23, Tower 2, World Trade Center, Pune 400014, Maharashtra - India
+                </span>
+              </li>
+              <li className="flex items-start gap-3 text-sm text-white/60">
                 <Phone size={16} className="mt-0.5 shrink-0 text-gold" />
                 <span>+91 7304756419</span>
               </li>

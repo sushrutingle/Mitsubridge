@@ -10,6 +10,7 @@ import MeagSchoolBenefits from "@/components/MeagSchoolBenefits";
 import MeagLearningModels from "@/components/MeagLearningModels";
 import MeagAccreditation from "@/components/MeagAccreditation";
 import MeagCareerPathways from "@/components/MeagCareerPathways";
+import MeagFaq from "@/components/MeagFaq";
 import InsightsSection from "@/components/InsightsSection";
 import BrochuresSection from "@/components/BrochuresSection";
 import MeagCTA from "@/components/MeagCTA";
@@ -47,6 +48,7 @@ export default async function MeagPage() {
         newsItems={newsItems}
       />
       <BrochuresSection brochures={brochures} />
+      <MeagFaq />
       <MeagCTA />
       <Footer />
     </>
