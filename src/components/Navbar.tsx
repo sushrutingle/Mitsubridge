@@ -13,7 +13,7 @@ const navLinks = [
   { label: "Global", href: `${basePath}/global` },
   { label: "MEAG", href: `${basePath}/meag` },
   { label: "About", href: `${basePath}/#about` },
-  { label: "Insights", href: `${basePath}/meag#insights` },
+  { label: "Catalogue", href: `${basePath}/catalogue` },
   { label: "Contact", href: `${basePath}/#contact` },
   { label: "Privacy Policy", href: `${basePath}/privacy/` },
 ];
@@ -22,8 +22,9 @@ export default function Navbar() {
   const pathname = usePathname();
   const privacyPath = `${basePath}/privacy/`;
   const consultationPath = `${basePath}/consultation/`;
-  
-  const isWhiteBgRoute = pathname === privacyPath || pathname === `${basePath}/privacy` || pathname === consultationPath || pathname === `${basePath}/consultation`;
+  const cataloguePath = `${basePath}/catalogue`;
+   
+  const isWhiteBgRoute = pathname === privacyPath || pathname === `${basePath}/privacy` || pathname === consultationPath || pathname === `${basePath}/consultation` || pathname === cataloguePath || pathname === `${cataloguePath}/`;
   const hasWhiteNavbarClass = typeof document !== "undefined" && document.documentElement.classList.contains("white-navbar");
   
   const isWhiteBgPage = isWhiteBgRoute || hasWhiteNavbarClass;
@@ -32,6 +33,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
+    if (isWhiteBgRoute) return;
     const handleScroll = () => {
       const hasClass = document.documentElement.classList.contains("white-navbar");
       setScrolled(window.scrollY > 50 || isWhiteBgRoute || hasClass);
@@ -43,6 +45,7 @@ export default function Navbar() {
   const isActive = (href: string) => {
     if (href === `${basePath}/global`) return pathname === `${basePath}/global`;
     if (href === `${basePath}/meag`) return pathname === `${basePath}/meag`;
+    if (href === `${basePath}/catalogue`) return pathname === `${basePath}/catalogue`;
     return false;
   };
 
