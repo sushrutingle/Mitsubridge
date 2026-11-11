@@ -7,7 +7,6 @@ interface Product {
   title: string;
   audience: string;
   duration: string;
-  price: string;
   cpdHours: string;
   description: string;
   brochureUrl: string;
@@ -20,7 +19,6 @@ const studentProducts: Product[] = [
     title: "MEAG CS AI Engineering Certificate",
     audience: "CS & IT Engineer / MCA",
     duration: "5 semesters",
-    price: "₹9,000 / semester",
     cpdHours: "96 CPD hours (5 sems)",
     description: "AI-powered software, intelligent workflows, knowledge systems and AI agents.",
     brochureUrl: "https://drive.google.com/file/d/1w_DAjqJxxYjkOkvVUdxhb9PpKh3z2VWK/view?usp=drive_link",
@@ -31,7 +29,6 @@ const studentProducts: Product[] = [
     title: "MEAG Industrial AI Engineering Certificate",
     audience: "Non-CS Core Engineer",
     duration: "5 semesters",
-    price: "₹9,000 / semester",
     cpdHours: "96 CPD hours (5 sems)",
     description: "AI for industrial systems, sensors, automation, robotics and infrastructure.",
     brochureUrl: "https://drive.google.com/file/d/1w_DAjqJxxYjkOkvVUdxhb9PpKh3z2VWK/view?usp=drive_link",
@@ -42,7 +39,6 @@ const studentProducts: Product[] = [
     title: "MEAG AI Specialist Certificate",
     audience: "Under Graduates (Any Stream)",
     duration: "1 Year",
-    price: "₹28,000",
     cpdHours: "48 CPD hours",
     description: "Learn how to select, structure, and integrate AI capabilities into study, research, business, and workplace workflows.",
     brochureUrl: "https://drive.google.com/file/d/1nt78Q3FAiqobUS5p5ZpptKlpOD9fXmG3/view?usp=drive_link",
@@ -53,7 +49,6 @@ const studentProducts: Product[] = [
     title: "MEAG International Junior AI Certificate",
     audience: "Grades 7-9 (School)",
     duration: "3 Years",
-    price: "₹6,000 / year",
     cpdHours: "24 CPD hours / year",
     description: "AI literacy, critical thinking, responsible AI habits and practical problem-solving.",
     brochureUrl: "https://drive.google.com/file/d/1vt7DHH0-D6qJEqO7plxirWG3iBVUD78w/view?usp=sharing",
@@ -64,7 +59,6 @@ const studentProducts: Product[] = [
     title: "MEAG International Applied AI Certificate",
     audience: "Grades 10-12 (Junior College)",
     duration: "1 Year",
-    price: "₹8,000",
     cpdHours: "24 CPD hours",
     description: "Independent AI use for learning, research, creativity, productivity and real-world challenges.",
     brochureUrl: "https://drive.google.com/file/d/19UaAwGuwQmrSnZHgAPxqblIfPmYjaMSJ/view?usp=sharing",
@@ -78,7 +72,6 @@ const professionalProducts: Product[] = [
     title: "MEAG Executive AI Leadership Certification",
     audience: "MBA & Management Students",
     duration: "4 semesters",
-    price: "₹15,000 / semester",
     cpdHours: "96 CPD hours (4 sems)",
     description: "Identify AI opportunities, redesign business processes, evaluate value and risk, and contribute to AI-enabled transformation.",
     brochureUrl: "https://drive.google.com/file/d/1_u8UaSEUWx-osEPUrZFjSXPP0lRux8eR/view?usp=sharing",
@@ -89,7 +82,6 @@ const professionalProducts: Product[] = [
     title: "MEAG Strategic AI Practitioner Certificate",
     audience: "Learners from Any Background",
     duration: "3 months",
-    price: "₹25,000",
     cpdHours: "24 CPD hours",
     description: "Move from experimenting with AI to systematic use in research, analysis, communication and productivity.",
     brochureUrl: "https://drive.google.com/file/d/1unTM_QFjET5QEkr0q3GnrAkJiyR_Lm7R/view?usp=sharing",
@@ -100,7 +92,6 @@ const professionalProducts: Product[] = [
     title: "MEAG AI Project Management Certificate",
     audience: "Project Managers",
     duration: "4 months",
-    price: "₹30,000",
     cpdHours: "32 CPD hours",
     description: "Apply AI to project delivery, scoping, output evaluation, risk, governance and implementation.",
     brochureUrl: "https://drive.google.com/file/d/1cjfJo2gPLsbq8H2Njae11Gdnln6TgV3p/view?usp=sharing",
@@ -111,7 +102,6 @@ const professionalProducts: Product[] = [
     title: "MEAG Enterprise AI Architect Certificate",
     audience: "Architects & Lead Developers",
     duration: "6 months",
-    price: "₹50,000",
     cpdHours: "48 CPD hours",
     description: "Design enterprise AI systems combining agents, knowledge systems, data, workflows and governance.",
     brochureUrl: "https://drive.google.com/file/d/1Kcb6ska9NGwVpgXCAHovZImJcpqvtV_L/view?usp=sharing",
@@ -122,7 +112,6 @@ const professionalProducts: Product[] = [
     title: "MEAG AI Professional Certificate",
     audience: "Law, Healthcare & Regulated Sectors",
     duration: "6 months",
-    price: "₹50,000",
     cpdHours: "48 CPD hours",
     description: "Apply AI responsibly within high-stakes professional workflows and domain requirements.",
     brochureUrl: "https://drive.google.com/file/d/14-BzxM6g3EQdLKzYZIfMXVT8uzhFP0bl/view?usp=sharing",
@@ -161,7 +150,6 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
 
       <div className="flex flex-wrap items-center gap-3 text-xs font-medium text-slate-500 bg-slate-50 px-3 py-2 rounded-lg mb-4">
         <span>⏱️ {product.duration}</span>
-        <span className="text-gold font-bold">{product.price}</span>
         <span className="text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">{product.cpdHours}</span>
       </div>
 
