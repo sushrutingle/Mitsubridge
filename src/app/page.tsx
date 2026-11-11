@@ -25,7 +25,7 @@ export default async function Home() {
         ctaLink={hero?.ctaLink}
         backgroundImage={hero?.backgroundImage ?? null}
       />
-      <ProductCatalogue />
+      <ProductCatalogue linkTo="/catalogue" />
       <VideoSection
         videoId="HkwFplcSNLM"
         title="MEAG AI Pathways"

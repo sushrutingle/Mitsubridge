@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { FileText, ArrowRight, GraduationCap, Briefcase, BookOpen, Layers, Target, Users, Cpu, Shield, Scale, Code, FlaskConical, Landmark, Stethoscope, Building2 } from "lucide-react";
 
@@ -148,15 +149,15 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
       <h4 className="font-heading text-lg font-semibold text-navy mb-2">{product.title}</h4>
       <p className="text-sm text-gray-600 mb-4 line-clamp-2">{product.description}</p>
 
-      <div className="flex flex-wrap items-center gap-3 text-xs font-medium text-slate-500 bg-slate-50 px-3 py-2 rounded-lg mb-4">
+      <div className="flex flex-wrap items-center text-xs font-medium text-slate-500 bg-slate-50 px-3 py-2 rounded-lg mb-4">
         <span>⏱️ {product.duration}</span>
-        <span className="text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">{product.cpdHours}</span>
       </div>
 
       <a
         href={product.brochureUrl}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={(e) => e.stopPropagation()}
         className="inline-flex items-center gap-1.5 text-sm font-semibold text-gold hover:text-gold-dark transition-colors"
       >
         View Brochure
@@ -166,9 +167,19 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
   );
 }
 
-export default function ProductCatalogue() {
+export default function ProductCatalogue({ linkTo }: { linkTo?: string }) {
+  const router = useRouter();
+  const handleSectionClick = () => {
+    if (linkTo) router.push(linkTo);
+  };
+
   return (
-    <section id="product-catalogue" className="bg-white px-6 py-28 md:py-36 lg:px-12">
+    <section
+      id="product-catalogue"
+      className="bg-white px-6 py-28 md:py-36 lg:px-12"
+      onClick={linkTo ? handleSectionClick : undefined}
+      style={linkTo ? { cursor: "pointer" } : undefined}
+    >
       <div className="mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
